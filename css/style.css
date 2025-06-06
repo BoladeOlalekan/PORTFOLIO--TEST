@@ -22,6 +22,9 @@ body {
   justify-content: space-between;
   padding: 1.5em;
   align-items: center;
+  /* .show-nav{
+      transform: translateX(0%);
+  } */
 }
 .sect-1 header h1 span {
   color: #d4af37;
@@ -43,7 +46,7 @@ body {
 }
 .sect-1 header nav {
   list-style-type: none;
-  transform: translateX(100%);
+  transform: translateX(0%);
   position: fixed;
   right: 0;
   top: 0;
@@ -51,7 +54,7 @@ body {
   background: #f8f8f8;
   transition: transform 0.5s ease-in-out;
   z-index: 100;
-  width: 250px;
+  width: 100%;
   box-shadow: 0 8px 24px rgba(30, 42, 56, 0.18);
   border-radius: 8px;
 }
@@ -99,9 +102,6 @@ body {
 }
 .sect-1 header nav .hamburger-close span:nth-child(2) {
   transform: rotate(-47deg) translateY(-15px);
-}
-.sect-1 header nav .show-nav {
-  transform: translateX(0%);
 }
 .sect-1 .intro-sect .intro-1 {
   text-align: center;
@@ -504,12 +504,6 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .sect-1 header {
-    padding: 2.5em 4em;
-  }
-  .sect-1 header h1 {
-    font-size: 2.5em;
-  }
   .sect-1 header .hamburger-open {
     display: none;
   }
@@ -550,7 +544,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 3em;
-    padding: 2em 4em;
+    padding: 2em;
   }
   .sect-1 .intro-sect .intro-1 {
     flex: 1;
@@ -561,24 +555,33 @@ body {
     font-size: 3.5em;
   }
   .sect-1 .intro-sect .intro-1 .intro-text {
-    font-size: 1.1em;
+    font-size: 1em;
     padding: 0.5em 0;
   }
   .sect-1 .intro-sect .intro-1 .connect-me {
-    text-align: center;
+    text-align: left;
+  }
+  .sect-1 .intro-sect .intro-1 .connect-me p a {
+    margin-right: 1em;
   }
   .sect-1 .intro-sect .intro-1 .download-cv {
-    text-align: center;
+    text-align: left;
+    margin-top: 1.5em;
   }
-  .sect-1 .intro-sect .intro-2 {
+  .sect-1 .intro-2 {
     flex: 1;
   }
-  .sect-1 .intro-sect .intro-2 img {
+  .sect-1 .intro-2 img {
     position: relative;
     top: 2.3em;
+    border: 3px solid #f8f8f8;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    box-shadow: 0 8px 24px rgba(30, 42, 56, 0.18), 0 1.5px 4px rgba(212, 175, 55, 0.1);
   }
   .sect-2 {
     padding: 4em 6em 3em 6em;
+    box-shadow: 0 8px 24px rgba(30, 42, 56, 0.18), 0 1.5px 4px rgba(212, 175, 55, 0.1);
   }
   .sect-2 .skill-grid {
     width: 100%;
@@ -589,11 +592,11 @@ body {
     align-items: center;
   }
   .sect-2 .skill-grid ul .top {
-    grid-template-columns: repeat(3, 120px);
+    grid-template-columns: repeat(3, 200px);
     gap: 2em;
   }
   .sect-2 .skill-grid ul .bottom {
-    grid-template-columns: repeat(2, 120px);
+    grid-template-columns: repeat(2, 200px);
     gap: 2em;
   }
   .sect-2 .skill-grid ul li {
@@ -603,6 +606,7 @@ body {
   }
   .sect-3 {
     padding: 4em 6em 3em 6em;
+    box-shadow: 0 8px 24px rgba(30, 42, 56, 0.18), 0 1.5px 4px rgba(212, 175, 55, 0.1);
   }
   .sect-3 h4 {
     font-size: 2.2em;
@@ -616,6 +620,7 @@ body {
   }
   .sect-4 {
     padding: 4em 6em 3em 6em;
+    box-shadow: 0 8px 24px rgba(30, 42, 56, 0.18), 0 1.5px 4px rgba(212, 175, 55, 0.1);
   }
   .sect-4 .edu-grid {
     display: grid;
@@ -627,37 +632,32 @@ body {
   .sect-4 .edu-grid img {
     border-radius: 7em;
   }
-  .sect-4 .sect-5 ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3em;
-  }
-  .sect-4 .sect-5 ul li {
-    margin-bottom: 0;
-    min-width: 220px;
-  }
-  .sect-4 .sect-6 {
+  .sect-5 {
     padding: 4em 6em 3em 6em;
+    box-shadow: 0 8px 24px rgba(30, 42, 56, 0.18), 0 1.5px 4px rgba(212, 175, 55, 0.1);
   }
-  .sect-4 .sect-6 .connect-grid {
+  .sect-6 {
+    padding: 4em 5em 3em 5em;
+    box-shadow: 0 8px 24px rgba(30, 42, 56, 0.18), 0 1.5px 4px rgba(212, 175, 55, 0.1);
+  }
+  .sect-6 .connect-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2em;
   }
-  .sect-4 .sect-6 .connect-grid .main-ctc,
-  .sect-4 .sect-6 .connect-grid .media-ctc,
-  .sect-4 .sect-6 .connect-grid .form-ctc {
+  .sect-6 .connect-grid .main-ctc, .sect-6 .connect-grid .media-ctc, .sect-6 .connect-grid .form-ctc {
     margin-top: 0;
+    margin-right: 1em;
   }
-  .sect-4 .sect-6 .connect-grid .form-ctc form input,
-  .sect-4 .sect-6 .connect-grid .form-ctc form button {
+  .sect-6 .connect-grid .form-ctc form input,
+  .sect-6 .connect-grid .form-ctc form button {
     font-size: 1.1em;
   }
-  .sect-4 .sect-7 {
+  .sect-7 {
     padding: 2em 0;
+    box-shadow: 0 8px 24px rgba(30, 42, 56, 0.18), 0 1.5px 4px rgba(212, 175, 55, 0.1);
   }
-  .sect-4 .sect-7 footer p {
-    font-size: 1.1em;
+  .sect-7 footer p {
+    font-size: 1.5em;
   }
 }/*# sourceMappingURL=style.css.map */
