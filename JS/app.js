@@ -7,35 +7,43 @@ const experience = document.querySelector('.experience');
 const education = document.querySelector('.education');
 const certification = document.querySelector('.certification');
 const connect = document.querySelector('.connect');
+const goUpBtn = document.querySelector('.go-up a');
 
 openBtn.addEventListener('click' , () => {
-    navBar.style.transform = "translateX(0%)";
+    navBar.classList.add('open');
 })
 
 closeBtn.addEventListener('click' , () => {
-    navBar.style.transform = 'translateX(100%)';
+    navBar.classList.remove('open');
 })
 
 home.addEventListener('click' , () => {
-    navBar.style.transform = 'translateX(100%)';
+    navBar.classList.remove('open');
 })
 
 skills.addEventListener('click' , () => {
-    navBar.style.transform = 'translateX(100%)';
+    navBar.classList.remove('open');
 })
 
 experience.addEventListener('click' , () => {
-    navBar.style.transform = 'translateX(100%)';
+    navBar.classList.remove('open');
 })
 
 education.addEventListener('click' , () => {
-    navBar.style.transform = 'translateX(100%)';
+    navBar.classList.remove('open');
 })
 
 certification.addEventListener('click' , () => {
-    navBar.style.transform = 'translateX(100%)';
+    navBar.classList.remove('open');
 })
 
 connect.addEventListener('click' , () => {
-    navBar.style.transform = 'translateX(100%)';
+    navBar.classList.remove('open');
 })
+
+if (goUpBtn) {
+    goUpBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
